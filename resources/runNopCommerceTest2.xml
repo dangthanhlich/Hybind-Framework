@@ -3,19 +3,25 @@
   <test name="Run on Firefox">
     <classes>
       <parameter name="browser" value="firefox" />
-      <class name="com.nopcommerce.user.Level_04_Multiple_browser"/>
+      <class name="javaBasic.Topic_07_switch_case"/>
     </classes>
   </test> <!-- Test -->
    <test name="Run on chrome">
     <classes>
       <parameter name="browser" value="chrome" />
-      <class name="com.nopcommerce.user.Level_04_Multiple_browser"/>
+      <class name="javaBasic.Topic_07_switch_case"/>
     </classes>
   </test> 
    <test name="Run on Edge">
     <classes>
       <parameter name="browser" value="edge" />
-      <class name="com.nopcommerce.user.Level_04_Multiple_browser"/>
+      <class name="javaBasic.Topic_07_switch_case"/>
+    </classes>
+  </test> 
+   <test name="Run on IE">
+    <classes>
+      <parameter name="browser" value="ie" />
+      <class name="javaBasic.Topic_07_switch_case"/>
     </classes>
   </test> 
 </suite> <!-- Suite -->

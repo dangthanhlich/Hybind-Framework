@@ -1,3 +1,4 @@
+
 package com.nopcommerce.user;
 
 import java.util.Random;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 
 import commons.BasePage;
 
-public class User_01_Register_Login {
+public class User_01_Level02_Apply_BasePage_che_doi_tuong {
 	WebDriver driver;
 	String emailAddress;
 	// Declare(khai bao)
@@ -27,7 +28,8 @@ public class User_01_Register_Login {
 		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		// Initial(khoi tao)
-		basePage = new BasePage();
+		// che giấu đi việc khởi tạo của 1 đối tượng
+		basePage = BasePage.getBasePageObject();
 
 		emailAddress = "afc" + generateFakeNumber() + "@gmail.com";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
