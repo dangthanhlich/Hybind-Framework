@@ -9,6 +9,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest_Headless {
 	private WebDriver driver;
 	private String projectPath = System.getProperty("user.dir");
@@ -25,7 +27,7 @@ public class BaseTest_Headless {
 			options.addArguments("window-size=1920x1080");
 			driver = new FirefoxDriver(options);
 		} else if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browserName.equals("h_chrome")) {
 			System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");

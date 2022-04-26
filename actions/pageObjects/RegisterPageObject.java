@@ -13,7 +13,7 @@ public class RegisterPageObject extends BasePage {
 	}
 
 	public void clickToRegisterButton() {
-		waitForAllElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
+		waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
 		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
 
 	}
@@ -82,7 +82,7 @@ public class RegisterPageObject extends BasePage {
 	}
 
 	public void clickToLogoutLink() {
-		waitForAllElementClickable(driver, RegisterPageUI.LOGOUT_LINK);
+		waitForElementClickable(driver, RegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
 	}
 

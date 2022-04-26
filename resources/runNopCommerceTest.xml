@@ -3,19 +3,7 @@
   <test name="Run on Firefox">
     <classes>
       <parameter name="browser" value="firefox" />
-      <class name="com.nopcommerce.user.Level_04_Multiple_browser"/>
+      <class name="com.nopcommerce.user.Level_05_page_Factory"/>
     </classes>
   </test> <!-- Test -->
-   <test name="Run on chrome">
-    <classes>
-      <parameter name="browser" value="chrome" />
-      <class name="com.nopcommerce.user.Level_04_Multiple_browser"/>
-    </classes>
-  </test> 
-   <test name="Run on Edge">
-    <classes>
-      <parameter name="browser" value="edge" />
-      <class name="com.nopcommerce.user.Level_04_Multiple_browser"/>
-    </classes>
-  </test> 
 </suite> <!-- Suite -->
