@@ -56,7 +56,7 @@ public class BaseTest {
 			System.out.println("Browser name invalid");
 		}
 
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.get("https://demo.nopcommerce.com/");
 		driver.manage().window().maximize();
 		return driver;
