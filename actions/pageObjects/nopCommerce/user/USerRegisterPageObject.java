@@ -1,14 +1,15 @@
-package pageObjects;
+package pageObjects.nopCommerce.user;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.RegisterPageUI;
+import commons.PageGeneratorManager;
+import pageUIs.nopCommerce.user.RegisterPageUI;
 
-public class RegisterPageObject extends BasePage {
+public class USerRegisterPageObject extends BasePage {
 	private WebDriver driver;
 
-	public RegisterPageObject(WebDriver driver) {
+	public USerRegisterPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -81,7 +82,7 @@ public class RegisterPageObject extends BasePage {
 		return getElementText(driver, RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
 	}
 
-	public HomePageObject clickToLogoutLink() {
+	public USerHomePageObject clickToLogoutLink() {
 		waitForElementClickable(driver, RegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
 		return PageGeneratorManager.getHomePage(driver);

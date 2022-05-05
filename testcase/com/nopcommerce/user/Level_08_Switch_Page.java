@@ -10,14 +10,13 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.MyProductReviewPageObject;
-import pageObjects.AddressPageObject;
-import pageObjects.CustomerInforPageObject;
-import pageObjects.PageGeneratorManager;
-import pageObjects.RegisterPageObject;
-import pageObjects.RewardPointPageObject;
+import commons.GlobalConstants;
+import commons.PageGeneratorManager;
+import pageObjects.nopCommerce.admin.AdminDashboardPageObject;
+import pageObjects.nopCommerce.admin.AdminLoginPageObject;
+import pageObjects.nopCommerce.user.USerCustomerInforPageObject;
+import pageObjects.nopCommerce.user.USerHomePageObject;
+import pageObjects.nopCommerce.user.USerLoginPageObject;
 
 public class Level_08_Switch_Page extends BaseTest {
 
@@ -26,79 +25,75 @@ public class Level_08_Switch_Page extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 
-		homePage = PageGeneratorManager.getHomePage(driver);
+		userHomePage = PageGeneratorManager.getUserHomePage(driver);
+		userEmailAddress = "poi@gmail.com";
+		userPassword = "123456";
+		adminEmailAddress = "admin@yourstore.com";
+		adminPassword = "admin";
 
-		firstName = "Automation";
-		lastName = "FC";
-		emailAddress = "afc" + generateFakeNumber() + "@gmail.vn";
-		validPassword = "123456";
+	}
+
+	// @Test
+	// public void Role_01_User_To_Admin() {
+	// userLoginPage = userHomePage.openLoginPage();
+	//
+	// // Login as user role
+	// userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
+	//
+	// Assert.assertTrue(userHomePage.isMyAccountLinkDisplayed());
+	// }
+	//
+	// @Test
+	// public void Role_02_Admin_To_User() {
+	//
+	// userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_URL);
+	// adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
+	// adminDashboardPage = adminLoginPage.loginAsAdmin(adminEmailAddress, adminPassword);
+	//
+	// Assert.assertTrue(adminDashboardPage.isDashboardHeaderDisplayed());
+	// }
+
+	@Test
+	public void Role_01_User_To_Admin() {
+		userLoginPage = userHomePage.openLoginPage();
+
+		// Login as user role
+		userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
+
+		Assert.assertTrue(userHomePage.isMyAccountLinkDisplayed());
+
+		// home page -> customer Infor
+		userCustomerInfoPage = userHomePage.openMyAccountPage();
+
+		// customer Infor ->click logout -> Home Page
+		userHomePage = userCustomerInfoPage.clickToLogoutLinkUserPage(driver);
+
+		// user home page -> open admin page -> login page admin
+		userHomePage.openPageUrl(driver, GlobalConstants.ADMIN_PAGE_URL);
+		adminLoginPage = PageGeneratorManager.getAdminLoginPage(driver);
+
+		// login as admin role
+		adminDashboardPage = adminLoginPage.loginAsAdmin(adminEmailAddress, adminPassword);
+
+		Assert.assertTrue(adminDashboardPage.isDashboardHeaderDisplayed());
+
+		// Dashboard page -> Click logout -> login page (admin)
+		adminLoginPage = adminDashboardPage.clickToLogoutLinkAdminPage(driver);
 
 	}
 
 	@Test
-	public void User_01_Register() {
-		registerPage = homePage.clickToRegisterLink();
-		registerPage.inputToFirstnameTextbox(firstName);
-		registerPage.inputToLastNameTextbox(lastName);
-		registerPage.inputToEmailTextbox(emailAddress);
-		registerPage.inputToPasswordTextbox(validPassword);
-		registerPage.inputToConfirmPasswordTextbox(validPassword);
-		registerPage.clickToRegisterButton();
+	public void Role_02_Admin_To_User() {
+		// Login page (admin) -> open user url -> home page(user)
+		adminLoginPage.openPageUrl(driver, GlobalConstants.PORTAL_PAGE_URL);
+		userHomePage = PageGeneratorManager.getUserHomePage(driver);
 
-		Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
+		// Home page -> login page(user)
+		userLoginPage = userHomePage.openLoginPage();
 
-		homePage = registerPage.clickToLogoutLink();
-	}
-
-	@Test
-	public void User_02_Login() {
-		loginPage = homePage.clickToLoginLink();
-
-		loginPage.inputToEmailTextbox(emailAddress);
-		loginPage.inputToPasswordTextbox(validPassword);
-
-		homePage = loginPage.clickToLoginButton();
-		Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
-	}
-
-	@Test
-	public void User_03_Customer_Infor() {
-		customerInforPage = homePage.clickToMyAccountLink();
-		Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
-	}
-
-	@Test
-	public void User_04_Switch_page() {
-		// knowledge của page object
-		// một page A khi chuyển qua page B thì phải viết 1 hàm
-		// (action : open /click/....: link /button/image/..) để mở page B đó lên
-
-		// Customer Infor -> Address
-		addressPage = customerInforPage.openAddressPage(driver);
-
-		// Address->My Product review
-		myProductReviewPage = addressPage.openMyProductReviewPage(driver);
-
-		// reward point -> address
-		// addressPage = rewardPointPage.openAddressPage(driver);
-
-		// Address -> reward point
-		rewardPointPage = addressPage.openRewardPointPage(driver);
-
-		// reward point -> My product review
-		myProductReviewPage = rewardPointPage.openMyProductReviewPage(driver);
-
-		// My Product Review ->Address
-		addressPage = myProductReviewPage.openAddressPage(driver);
-
-		customerInforPage = addressPage.openCustomerInforPage(driver);
-
-		myProductReviewPage = customerInforPage.openMyProductReviewPage(driver);
-	}
-
-	@Test
-	public void User_04_Switch_Role() {
-
+		// Login as user role
+		userHomePage = userLoginPage.loginAsUser(userEmailAddress, userPassword);
+		Assert.assertTrue(userHomePage.isMyAccountLinkDisplayed());
 	}
 
 	@AfterClass
@@ -112,13 +107,10 @@ public class Level_08_Switch_Page extends BaseTest {
 	}
 
 	private WebDriver driver;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private CustomerInforPageObject customerInforPage;
-	private AddressPageObject addressPage;
-	private MyProductReviewPageObject myProductReviewPage;
-	private RewardPointPageObject rewardPointPage;
-	private String firstName, lastName, emailAddress, validPassword;
-
+	private USerHomePageObject userHomePage;
+	private USerLoginPageObject userLoginPage;
+	private USerCustomerInforPageObject userCustomerInfoPage;
+	private AdminLoginPageObject adminLoginPage;
+	private AdminDashboardPageObject adminDashboardPage;
+	private String userEmailAddress, userPassword, adminEmailAddress, adminPassword;
 }

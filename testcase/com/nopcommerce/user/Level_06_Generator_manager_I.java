@@ -10,17 +10,17 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopCommerce.user.USerHomePageObject;
+import pageObjects.nopCommerce.user.USerLoginPageObject;
+import pageObjects.nopCommerce.user.USerRegisterPageObject;
 
 public class Level_06_Generator_manager_I extends BaseTest {
 
 	private WebDriver driver;
 	private String firstName, lastName, inValidEmail, notFoundEmail, existingEmail, incorrectPassword, validPassword;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
+	private USerHomePageObject homePage;
+	private USerRegisterPageObject registerPage;
+	private USerLoginPageObject loginPage;
 	private String projectPath = System.getProperty("user.dir");
 
 	@Parameters("browser")
@@ -28,7 +28,7 @@ public class Level_06_Generator_manager_I extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 		// 1
-		homePage = new HomePageObject(driver);
+		homePage = new USerHomePageObject(driver);
 
 		firstName = "Automation";
 		lastName = "FC";
@@ -41,7 +41,7 @@ public class Level_06_Generator_manager_I extends BaseTest {
 		System.out.println("Pre-Condition - step 01 : click to register link");
 		homePage.clickToRegisterLink();
 
-		registerPage = new RegisterPageObject(driver);
+		registerPage = new USerRegisterPageObject(driver);
 
 		System.out.println("Pre-Condition -  03- step 2 : input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);

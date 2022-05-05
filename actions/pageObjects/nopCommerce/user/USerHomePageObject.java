@@ -1,15 +1,16 @@
-package pageObjects;
+package pageObjects.nopCommerce.user;
 
 import org.openqa.selenium.WebDriver;
 
 import commons.BasePage;
-import pageUIs.HomePageUI;
+import commons.PageGeneratorManager;
+import pageUIs.nopCommerce.user.HomePageUI;
 
-public class HomePageObject extends BasePage {
+public class USerHomePageObject extends BasePage {
 
 	private WebDriver driver;
 
-	public HomePageObject(WebDriver driver) {
+	public USerHomePageObject(WebDriver driver) {
 		this.driver = driver;
 	}
 
@@ -18,10 +19,10 @@ public class HomePageObject extends BasePage {
 	// clickToElement(driver, HomePageUI.REGISTER_LINK);
 	// return PageGeneratorManager.getRegisterPage(driver);
 	// }
-	public RegisterPageObject openRegisterPage() {
+	public USerRegisterPageObject openRegisterPage() {
 		waitForElementClickable(driver, HomePageUI.REGISTER_LINK);
 		clickToElement(driver, HomePageUI.REGISTER_LINK);
-		return PageGeneratorManager.getRegisterPage(driver);
+		return PageGeneratorManager.getUserRegisterPage(driver);
 	}
 
 	// public LoginPageObject clickToLoginLink() {
@@ -30,10 +31,10 @@ public class HomePageObject extends BasePage {
 	// return PageGeneratorManager.getLoginPage(driver);
 	//
 	// }
-	public LoginPageObject openLoginPage() {
+	public USerLoginPageObject openLoginPage() {
 		waitForElementClickable(driver, HomePageUI.LOGIN_LINK);
 		clickToElement(driver, HomePageUI.LOGIN_LINK);
-		return PageGeneratorManager.getLoginPage(driver);
+		return PageGeneratorManager.getUserLoginPage(driver);
 
 	}
 
@@ -47,10 +48,10 @@ public class HomePageObject extends BasePage {
 	// clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
 	// return PageGeneratorManager.getMyAccountPage(driver);
 	// }
-	public CustomerInforPageObject openMyAccountPage() {
+	public USerCustomerInforPageObject openMyAccountPage() {
 		waitForElementClickable(driver, HomePageUI.MY_ACCOUNT_LINK);
 		clickToElement(driver, HomePageUI.MY_ACCOUNT_LINK);
-		return PageGeneratorManager.getMyAccountPage(driver);
+		return PageGeneratorManager.getUserMyAccountPage(driver);
 	}
 
 }

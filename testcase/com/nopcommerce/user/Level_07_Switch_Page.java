@@ -10,14 +10,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.MyProductReviewPageObject;
-import pageObjects.AddressPageObject;
-import pageObjects.CustomerInforPageObject;
-import pageObjects.PageGeneratorManager;
-import pageObjects.RegisterPageObject;
-import pageObjects.RewardPointPageObject;
+import commons.PageGeneratorManager;
+import pageObjects.nopCommerce.user.USerAddressPageObject;
+import pageObjects.nopCommerce.user.USerCustomerInforPageObject;
+import pageObjects.nopCommerce.user.USerHomePageObject;
+import pageObjects.nopCommerce.user.USerLoginPageObject;
+import pageObjects.nopCommerce.user.USerMyProductReviewPageObject;
+import pageObjects.nopCommerce.user.USerRegisterPageObject;
+import pageObjects.nopCommerce.user.USerRewardPointPageObject;
 
 public class Level_07_Switch_Page extends BaseTest {
 
@@ -26,7 +26,7 @@ public class Level_07_Switch_Page extends BaseTest {
 	public void beforeClass(String browserName) {
 		driver = getBrowserDriver(browserName);
 
-		homePage = PageGeneratorManager.getHomePage(driver);
+		homePage = PageGeneratorManager.getUserHomePage(driver);
 
 		firstName = "Automation";
 		lastName = "FC";
@@ -112,13 +112,13 @@ public class Level_07_Switch_Page extends BaseTest {
 	}
 
 	private WebDriver driver;
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
-	private LoginPageObject loginPage;
-	private CustomerInforPageObject customerInforPage;
-	private AddressPageObject addressPage;
-	private MyProductReviewPageObject myProductReviewPage;
-	private RewardPointPageObject rewardPointPage;
+	private USerHomePageObject homePage;
+	private USerRegisterPageObject registerPage;
+	private USerLoginPageObject loginPage;
+	private USerCustomerInforPageObject customerInforPage;
+	private USerAddressPageObject addressPage;
+	private USerMyProductReviewPageObject myProductReviewPage;
+	private USerRewardPointPageObject rewardPointPage;
 	private String firstName, lastName, emailAddress, validPassword;
 
 }

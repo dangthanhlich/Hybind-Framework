@@ -10,8 +10,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pageObjects.HomePageObject;
-import pageObjects.RegisterPageObject;
+import pageObjects.nopCommerce.user.USerHomePageObject;
+import pageObjects.nopCommerce.user.USerRegisterPageObject;
 
 public class Level_03_Page_Object2 {
 
@@ -20,8 +20,8 @@ public class Level_03_Page_Object2 {
 	private String firstName, lastName, emailAddress, password;
 	// declare + init
 	private String projectPath = System.getProperty("user.dir");
-	private HomePageObject homePage;
-	private RegisterPageObject registerPage;
+	private USerHomePageObject homePage;
+	private USerRegisterPageObject registerPage;
 
 	@BeforeClass
 	public void beforeClass() {
@@ -34,8 +34,8 @@ public class Level_03_Page_Object2 {
 		lastName = "FC";
 		emailAddress = "afc" + generateFakeNumber() + "@gmail.com";
 		password = "123456";
-		homePage = new HomePageObject(driver);
-		registerPage = new RegisterPageObject(driver);
+		homePage = new USerHomePageObject(driver);
+		registerPage = new USerRegisterPageObject(driver);
 	}
 
 	@Test
