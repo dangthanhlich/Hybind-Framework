@@ -96,11 +96,6 @@ public class Level_07_Switch_Page extends BaseTest {
 		myProductReviewPage = customerInforPage.openMyProductReviewPage(driver);
 	}
 
-	@Test
-	public void User_04_Switch_Role() {
-
-	}
-
 	@AfterClass
 	public void afterClass() {
 		driver.quit();

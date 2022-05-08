@@ -85,7 +85,7 @@ public class USerRegisterPageObject extends BasePage {
 	public USerHomePageObject clickToLogoutLink() {
 		waitForElementClickable(driver, RegisterPageUI.LOGOUT_LINK);
 		clickToElement(driver, RegisterPageUI.LOGOUT_LINK);
-		return PageGeneratorManager.getHomePage(driver);
+		return PageGeneratorManager.getUserHomePage(driver);
 	}
 
 	public String getErrorExistingEmailMessage() {

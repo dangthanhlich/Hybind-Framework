@@ -44,7 +44,7 @@ public class Level_03_Page_Object2 {
 		// waitForAllElementClickable(driver, "//a[@class='ico-register']");
 		// clickToElement(driver, "//a[@class='ico-register']");
 		System.out.println("Home Page 01 - step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// waitForAllElementClickable(driver, "//button[@id='register-button']");
 		// clickToElement(driver, "//button[@id='register-button']");
@@ -70,7 +70,7 @@ public class Level_03_Page_Object2 {
 		// waitForAllElementClickable(driver, "//a[@class='ico-register']");
 		// clickToElement(driver, "//a[@class='ico-register']");
 		System.out.println("Home Page 02- step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// sendkeyToElement(driver, "//input[@id='FirstName']", "Automation");
 		// sendkeyToElement(driver, "//input[@id='LastName']", "FC");
@@ -98,7 +98,7 @@ public class Level_03_Page_Object2 {
 	@Test
 	public void TC_03_Register_Success() {
 		System.out.println("Home Page 03- step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register Page 03- step 2 : input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -122,7 +122,7 @@ public class Level_03_Page_Object2 {
 	@Test
 	public void TC_04_Register_Existing_Email() {
 		System.out.println("Home Page 04- step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register Page 04- step 2 : input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -143,7 +143,7 @@ public class Level_03_Page_Object2 {
 	@Test
 	public void TC_05_Register_password_Less_Than_6_Chars() {
 		System.out.println("Home Page - step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register Page 05- step 2 : input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);
@@ -164,7 +164,7 @@ public class Level_03_Page_Object2 {
 	@Test
 	public void TC_06_Register_Invalid_Confirm_Password() {
 		System.out.println("Home Page 06- step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		System.out.println("Register Page 06- step 2 : input to required fields");
 		registerPage.inputToFirstnameTextbox(firstName);

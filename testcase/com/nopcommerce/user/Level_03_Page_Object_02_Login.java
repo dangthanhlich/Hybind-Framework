@@ -43,7 +43,7 @@ public class Level_03_Page_Object_02_Login {
 		homePage = new USerHomePageObject(driver);
 
 		System.out.println("Pre-Condition - step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// Click Register link -> nhảy qua trang Register
 		registerPage = new USerRegisterPageObject(driver);
@@ -71,7 +71,7 @@ public class Level_03_Page_Object_02_Login {
 
 	@Test
 	public void Login_01_Empty_Data() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		// từ trang Home -click login link -> qua trang login
 		loginPage = new USerLoginPageObject(driver);
 
@@ -84,7 +84,7 @@ public class Level_03_Page_Object_02_Login {
 	@Test
 	public void Login_02_Invalid_Email() {
 
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		// từ trang Home -click login link -> qua trang login
 		loginPage = new USerLoginPageObject(driver);
 
@@ -98,7 +98,7 @@ public class Level_03_Page_Object_02_Login {
 
 	@Test
 	public void Login_03_Email_Not_Found() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		// từ trang Home -click login link -> qua trang login
 		loginPage = new USerLoginPageObject(driver);
 
@@ -112,7 +112,7 @@ public class Level_03_Page_Object_02_Login {
 
 	@Test
 	public void Login_04_Existng_Email_Empty_Password() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		// từ trang Home -click login link -> qua trang login
 		loginPage = new USerLoginPageObject(driver);
 
@@ -126,7 +126,7 @@ public class Level_03_Page_Object_02_Login {
 
 	@Test
 	public void Login_05_Existing_Email_Incorrect_Password() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		// từ trang Home -click login link -> qua trang login
 		loginPage = new USerLoginPageObject(driver);
 
@@ -140,7 +140,7 @@ public class Level_03_Page_Object_02_Login {
 
 	@Test
 	public void Login_06_Valid_Email_Password() {
-		homePage.clickToLoginLink();
+		homePage.openLoginPage();
 		// từ trang Home -click login link -> qua trang login
 		loginPage = new USerLoginPageObject(driver);
 

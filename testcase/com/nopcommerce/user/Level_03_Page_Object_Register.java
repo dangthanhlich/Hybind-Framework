@@ -42,7 +42,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void TC_01_Register_Empty_Data() {
 		System.out.println("Home Page 01 - step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// Click Register link -> nhảy qua trang Register
 		registerPage = new USerRegisterPageObject(driver);
@@ -62,7 +62,7 @@ public class Level_03_Page_Object_Register {
 	public void TC_02_Register_Invalid_Email() {
 
 		System.out.println("Home Page 02- step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// Click Register link -> nhảy qua trang Register
 		registerPage = new USerRegisterPageObject(driver);
@@ -84,7 +84,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void TC_03_Register_Success() {
 		System.out.println("Home Page 03- step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// Click Register link -> nhảy qua trang Register
 		registerPage = new USerRegisterPageObject(driver);
@@ -111,7 +111,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void TC_04_Register_Existing_Email() {
 		System.out.println("Home Page 04- step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// Click Register link -> nhảy qua trang Register
 		registerPage = new USerRegisterPageObject(driver);
@@ -135,7 +135,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void TC_05_Register_password_Less_Than_6_Chars() {
 		System.out.println("Home Page - step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// Click Register link -> nhảy qua trang Register
 		registerPage = new USerRegisterPageObject(driver);
@@ -159,7 +159,7 @@ public class Level_03_Page_Object_Register {
 	@Test
 	public void TC_06_Register_Invalid_Confirm_Password() {
 		System.out.println("Home Page 06- step 01 : click to register link");
-		homePage.clickToRegisterLink();
+		homePage.openRegisterPage();
 
 		// Click Register link -> nhảy qua trang Register
 		registerPage = new USerRegisterPageObject(driver);
