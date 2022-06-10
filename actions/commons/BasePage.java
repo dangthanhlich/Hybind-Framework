@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -21,6 +22,7 @@ import pageObjects.nopCommerce.user.USerCustomerInforPageObject;
 import pageObjects.nopCommerce.user.USerHomePageObject;
 import pageObjects.nopCommerce.user.USerMyProductReviewPageObject;
 import pageObjects.nopCommerce.user.USerRewardPointPageObject;
+import pageUIs.jQuery.upLoadFile.BasePageJqueryUI;
 import pageUIs.nopCommerce.user.BasePageUI;
 import pageUIs.nopCommerce.user.CustomerInforPageUI;
 import pageUIs.nopCommerce.user.MyProductPageUI;
@@ -122,7 +124,7 @@ public class BasePage {
 	// locatorType : ID = / CSS=/ XPATH=/ NAME=/ CLASS=
 	// locatorType : Id = / Css=/ Xpath=/ Name=/ Class=
 
-	private By getByLocator(String locatorType) {
+	public By getByLocator(String locatorType) {
 		By by = null;
 		System.out.println("Locator type = " + locatorType);
 		if (locatorType.startsWith("id=") || locatorType.startsWith("ID=") || locatorType.startsWith("Id=")) {
@@ -144,18 +146,18 @@ public class BasePage {
 
 	// nếu như truyền vào locator type là xpath = đúng
 	// truyền vào locator type#xpath = sai
-	private String getDynamicXpath(String locatorType, String... values) {
+	public String getDynamicXpath(String locatorType, String... values) {
 		if (locatorType.startsWith("xpath=") || locatorType.startsWith("XPATH=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPath=")) {
 			locatorType = String.format(locatorType, (Object[]) values);
 		}
 		return locatorType;
 	}
 
-	private WebElement getWebElement(WebDriver driver, String locatorType) {
+	public WebElement getWebElement(WebDriver driver, String locatorType) {
 		return driver.findElement(getByLocator(locatorType));
 	}
 
-	private List<WebElement> getListWebElement(WebDriver driver, String locatorType) {
+	public List<WebElement> getListWebElement(WebDriver driver, String locatorType) {
 		return driver.findElements(getByLocator(locatorType));
 	}
 
@@ -179,14 +181,14 @@ public class BasePage {
 		element.sendKeys(textValue);
 	}
 
-	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem) {
+	public void selectItemDefaultDropdown(WebDriver driver, String locatorType, String textItem) {
 		Select select = new Select(getWebElement(driver, locatorType));
-		select.selectByValue(textItem);
+		select.selectByVisibleText(textItem);
 	}
 
-	public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem, String... dynamicValues) {
+	public void selectItemDefaultDropdown(WebDriver driver, String locatorType, String textItem, String... dynamicValues) {
 		Select select = new Select(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)));
-		select.selectByValue(textItem);
+		select.selectByVisibleText(textItem);
 	}
 
 	public String getSelectedItemDefaultDropdown(WebDriver driver, String locatorType) {
@@ -257,15 +259,29 @@ public class BasePage {
 		return getListWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).size();
 	}
 
-	public void checkToDefaultCheckboxRadio(WebDriver driver, String locatorType) {
+	public void checkToDefaultCheckboxOrRadio(WebDriver driver, String locatorType) {
 		WebElement element = getWebElement(driver, locatorType);
 		if (!element.isSelected()) {
 			element.click();
 		}
 	}
+	
+	public void checkToDefaultCheckboxOrRadio(WebDriver driver, String locatorType,String... dynamicValues) {
+		WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
+		if (!element.isSelected()) {
+			element.click();
+		}
+	}
 
-	public void uncheckToDefaultCheckboxRadio(WebDriver driver, String locatorType) {
+	public void uncheckToDefaultCheckboxOrRadio(WebDriver driver, String locatorType) {
 		WebElement element = getWebElement(driver, locatorType);
+		if (element.isSelected()) {
+			element.click();
+		}
+	}
+	
+	public void uncheckToDefaultCheckboxOrRadio(WebDriver driver, String locatorType,String... dynamicValues) {
+		WebElement element = getWebElement(driver,  getDynamicXpath(locatorType, dynamicValues));
 		if (element.isSelected()) {
 			element.click();
 		}
@@ -298,6 +314,16 @@ public class BasePage {
 	public void hoverMouseElement(WebDriver driver, String locatorType) {
 		Actions action = new Actions(driver);
 		action.moveToElement(getWebElement(driver, locatorType)).perform();
+	}
+
+	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key) {
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver, locatorType), key).perform();
+	}
+
+	public void pressKeyToElement(WebDriver driver, String locatorType, Keys key, String... dynamicValues) {
+		Actions action = new Actions(driver);
+		action.sendKeys(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)), key).perform();
 	}
 
 	public void scrollToBottomPage(WebDriver driver) {
@@ -343,30 +369,30 @@ public class BasePage {
 		jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getWebElement(driver, locatorType));
 	}
 
-	public boolean areJQueryAndJSLoadedSuccess(WebDriver driver) {
-		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
-		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-
-		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
-			@Override
-			public Boolean apply(WebDriver driver) {
-				try {
-					return ((Long) jsExecutor.executeScript("return jQuery.active") == 0);
-				} catch (Exception e) {
-					return true;
-				}
-			}
-		};
-
-		ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
-			@Override
-			public Boolean apply(WebDriver driver) {
-				return jsExecutor.executeScript("return document.readyState").toString().equals("complete");
-			}
-		};
-
-		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
-	}
+//	public boolean areJQueryAndJSLoadedSuccess(WebDriver driver) {
+//		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
+//		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+//
+//		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
+//			@Override
+//			public Boolean apply(WebDriver driver) {
+//				try {
+//					return ((Long) jsExecutor.executeScript("return jQuery.active") == 0);
+//				} catch (Exception e) {
+//					return true;
+//				}
+//			}
+//		};
+//
+//		ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
+//			@Override
+//			public Boolean apply(WebDriver driver) {
+//				return jsExecutor.executeScript("return document.readyState").toString().equals("complete");
+//			}
+//		};
+//
+//		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
+//	}
 
 	public String getElementValidationMessage(WebDriver driver, String locatorType) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
@@ -381,6 +407,13 @@ public class BasePage {
 		} else {
 			return false;
 		}
+	}
+	
+	public boolean isImageLoaded(WebDriver driver, String locatorType, String... dynamicValues) {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		boolean status = (boolean) jsExecutor.executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)));
+		return status;
+		
 	}
 
 	public void waitForElementVisible(WebDriver driver, String locatorType) {
@@ -432,6 +465,17 @@ public class BasePage {
 		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
 	}
+	
+	public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
+		//đường dẫn của thư mục UploadFies: windows/mac/linux
+		String filePath = GlobalConstants.UPLOAD_FILE;
+		String fullFileName="";
+		for(String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim();
+		getWebElement(driver, BasePageJqueryUI.UPLOAD_FILE).sendKeys(fullFileName);
+	}
 
 	// tối ưu bài học level_07_Switch_page
 	public USerCustomerInforPageObject openCustomerInforPage(WebDriver driver) {
@@ -459,6 +503,7 @@ public class BasePage {
 	}
 
 	// tối ưu bở bài học 09_Dynamic_locator
+	
 	public BasePage openPageAtMyAccountByName(WebDriver driver, String pageName) {
 		waitForElementClickable(driver, BasePageUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_PAGE_AREA, pageName);
 		clickToElement(driver, BasePageUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_PAGE_AREA, pageName);
@@ -494,5 +539,7 @@ public class BasePage {
 		clickToElement(driver, BasePageUI.LOGOUT_LINK_AT_ADMIN);
 		return PageGeneratorManager.getAdminLoginPage(driver);
 	}
+
+	private long longTimeout = GlobalConstants.LONG_TIMEOUT;
 
 }

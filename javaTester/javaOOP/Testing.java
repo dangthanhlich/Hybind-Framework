@@ -6,6 +6,12 @@ public class Testing extends Annimal {
 		// Body
 	}
 
+	@Override
+	void setAnnimalName() {
+		// TODO Auto-generated method stub
+
+	}
+
 }
 
 // package javaOOP;
