@@ -3,6 +3,8 @@ package commons;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,6 +22,11 @@ import javaOOP.EnviromentList;
 
 public class BaseTest {
 	private WebDriver driver;
+	protected final Log log;
+	
+	protected BaseTest() {
+		log = LogFactory.getLog(getClass());
+	}
 
 	protected WebDriver getBrowserDriver(String browserName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toLowerCase());
@@ -151,13 +158,10 @@ public class BaseTest {
 	protected boolean verifyTrue(boolean condition) {
 		boolean pass = true;
 		try {
-			if (condition == true) {
-				System.out.println(" -------------------------- PASSED -------------------------- ");
-			} else {
-				System.out.println(" -------------------------- FAILED -------------------------- ");
-			}
 			Assert.assertTrue(condition);
+			System.out.println(" -------------------------- PASSED -------------------------- ");
 		} catch (Throwable e) {
+			System.out.println(" -------------------------- FAILED -------------------------- ");
 			pass = false;
 
 			// Add lỗi vào ReportNG
@@ -171,13 +175,10 @@ public class BaseTest {
 	protected boolean verifyFalse(boolean condition) {
 		boolean pass = true;
 		try {
-			if (condition == false) {
-				System.out.println(" -------------------------- PASSED -------------------------- ");
-			} else {
-				System.out.println(" -------------------------- FAILED -------------------------- ");
-			}
 			Assert.assertFalse(condition);
+			System.out.println(" -------------------------- PASSED -------------------------- ");
 		} catch (Throwable e) {
+			System.out.println(" -------------------------- FAILED -------------------------- ");
 			pass = false;
 			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
 			Reporter.getCurrentTestResult().setThrowable(e);

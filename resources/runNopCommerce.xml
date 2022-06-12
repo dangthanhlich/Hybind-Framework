@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="NopCommerce">
-  <parameter name="url" value ="https://www.jqueryscript.net/demo/jQuery-Dynamic-Data-Grid-Plugin-appendGrid/" />
-   <test name="Run on chrome">
+  <parameter name="url" value ="https://demo.nopcommerce.com/" />
+   <test name="Run on FIREFOX">
     <classes>
       <parameter name="browser" value="firefox" />
-      <class name="com.jquery.datatable.Level_10_DataTable_DataGird"/>
+      <class name="com.nopcommerce.user.Level_14_Log_Report_TestNG"/>
     </classes>
   </test>
 </suite> <!-- Suite -->

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="NopCommerce">
+<suite name="Facebook">
 <listeners>
-<listener class-name="comons.MethodListener"></listener>
+	<listener class-name="commons.MethodListener"/>
 </listeners>
   <parameter name="url" value ="https://www.facebook.com/" />
-   <test name="Run on chrome">
+   <test name="Run on FIREFOX">
     <classes>
       <parameter name="browser" value="firefox" />
-      <class name="com.jquery.datatable.Level_10_DataTable_DataGird"/>
+      <class name="com.facebook.register.Level_13_Element_Undisplayed"/>
     </classes>
   </test>
 </suite> <!-- Suite -->
