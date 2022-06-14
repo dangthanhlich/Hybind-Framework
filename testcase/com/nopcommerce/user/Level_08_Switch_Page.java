@@ -20,10 +20,10 @@ import pageObjects.nopCommerce.user.USerLoginPageObject;
 
 public class Level_08_Switch_Page extends BaseTest {
 
-	@Parameters({ "browser", "environment" })
+	@Parameters({ "browser", "url" })
 	@BeforeClass
-	public void beforeClass(String browserName, String environment) {
-		driver = getBrowserDriver(browserName);
+	public void beforeClass(String browserName, String appUrl) {
+		driver = getBrowserDriver(browserName, appUrl);
 
 		userHomePage = PageGeneratorManager.getUserHomePage(driver);
 		userEmailAddress = "poi@gmail.com";

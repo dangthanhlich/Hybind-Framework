@@ -252,30 +252,30 @@ public class BasePageFactory {
 		jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getWebElement(driver, xpathLocator));
 	}
 
-	public boolean areJQueryAndJSLoadedSuccess(WebDriver driver) {
-		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
-		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-
-		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
-			@Override
-			public Boolean apply(WebDriver driver) {
-				try {
-					return ((Long) jsExecutor.executeScript("return jQuery.active") == 0);
-				} catch (Exception e) {
-					return true;
-				}
-			}
-		};
-
-		ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
-			@Override
-			public Boolean apply(WebDriver driver) {
-				return jsExecutor.executeScript("return document.readyState").toString().equals("complete");
-			}
-		};
-
-		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
-	}
+//	public boolean areJQueryAndJSLoadedSuccess(WebDriver driver) {
+//		WebDriverWait explicitWait = new WebDriverWait(driver, 30);
+//		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+//
+//		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
+//			@Override
+//			public Boolean apply(WebDriver driver) {
+//				try {
+//					return ((Long) jsExecutor.executeScript("return jQuery.active") == 0);
+//				} catch (Exception e) {
+//					return true;
+//				}
+//			}
+//		};
+//
+//		ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
+//			@Override
+//			public Boolean apply(WebDriver driver) {
+//				return jsExecutor.executeScript("return document.readyState").toString().equals("complete");
+//			}
+//		};
+//
+//		return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
+//	}
 
 	public String getElementValidationMessage(WebDriver driver, String xpathLocator) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;

@@ -17,7 +17,6 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import javaOOP.BrowserList;
 import javaOOP.EnviromentList;
 
 public class BaseTest {
@@ -31,36 +30,36 @@ public class BaseTest {
 	protected WebDriver getBrowserDriver(String browserName) {
 		BrowserList browserList = BrowserList.valueOf(browserName.toLowerCase());
 
-		if (browserList == browserList.FIREFOX) {
+		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		} else if (browserList == browserList.H_FIREFOX) {
+		} else if (browserList == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			// Browser Option : selenium 3.xx trở lên
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("-headless");
 			options.addArguments("window-size=1920x1080");
 			driver = new FirefoxDriver(options);
-		} else if (browserList == browserList.CHROME) {
+		} else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if (browserList == browserList.H_CHROME) {
+		} else if (browserList == BrowserList.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			// Browser Option : selenium 3.xx trở lên
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			options.addArguments("window-size=1920x1080");
 			driver = new ChromeDriver(options);
-		} else if (browserList == browserList.EDGE) {
+		} else if (browserList == BrowserList.EDGE) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else if (browserList == browserList.IE) {
+		} else if (browserList == BrowserList.IE) {
 			WebDriverManager.iedriver().arch32().setup();
 			driver = new InternetExplorerDriver();
-		} else if (browserList == browserList.OPERA) {
+		} else if (browserList == BrowserList.OPERA) {
 			WebDriverManager.operadriver().setup();
 			driver = new OperaDriver();
-		} else if (browserList == browserList.COCCOC) {
+		} else if (browserList == BrowserList.COCCOC) {
 			// cốc cốc browser trừ đi 5-6 version ra chromedriver
 			WebDriverManager.chromedriver().driverVersion("105.0.88").setup();
 			ChromeOptions options = new ChromeOptions();
@@ -72,7 +71,7 @@ public class BaseTest {
 			}
 
 			driver = new ChromeDriver(options);
-		} else if (browserList == browserList.BRAVE) {
+		} else if (browserList == BrowserList.BRAVE) {
 			WebDriverManager.chromedriver().driverVersion("100.0.4896.127").setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setBinary("C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe");
@@ -134,6 +133,10 @@ public class BaseTest {
 		return driver;
 	}
 
+	public WebDriver getDriverInstance() {
+		return this.driver;
+	}
+	
 	protected String getEnvironmentUrl(String serverName) {
 
 		String envUrl = null;
