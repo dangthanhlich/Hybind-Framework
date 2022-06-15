@@ -24,8 +24,9 @@ public class Level_14_Log_Report_TestNG extends BaseTest {
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
+		System.out.println(browserName);
 		driver = getBrowserDriver(browserName);
-
+		
 		homePage = PageGeneratorManager.getUserHomePage(driver);
 
 		firstName = "Automation";

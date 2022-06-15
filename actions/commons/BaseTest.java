@@ -25,8 +25,9 @@ public class BaseTest {
 	protected BaseTest() {
 		log = LogFactory.getLog(getClass());
 	}
-
+	
 	protected WebDriver getBrowserDriver(String browserName) {
+		
 		BrowserList browserList = BrowserList.valueOf(browserName.toLowerCase());
 
 		if (browserList == BrowserList.FIREFOX) {
@@ -136,14 +137,27 @@ public class BaseTest {
 		return this.driver;
 	}
 	
-	protected String getEnvironmentUrl(String serverName) {
-
+//	protected String getEnvironmentUrl(String environmentName) {
+//
+//		String url = null;
+//		switch(environmentName) {
+//		case"DEV":
+//			url=GlobalConstants.PORTAL_DEV_URL;
+//			break;
+//		case"TEST":
+//			url=GlobalConstants.PORTAL_TESTING_URL;
+//			break;
+//		}
+//		return url;
+//	}
+	
+	protected String getEnvironmentValue(String serverName) {
 		String envUrl = null;
 		EnviromentList environment = EnviromentList.valueOf(serverName.toUpperCase());
 		if (environment == EnviromentList.DEV) {
 			envUrl = "https://demo.nopcommerce.com/";
-		} else if (environment == EnviromentList.DEV) {
-			envUrl = "https://demo.nopcommerce.com/";
+		} else if (environment == EnviromentList.TESTING) {
+			envUrl = "https://admin-demo.nopcommerce.com/";
 		} else if (environment == EnviromentList.STAGING) {
 			envUrl = "https://demo.nopcommerce.com/";
 		} else if (environment == EnviromentList.PRODUCTION) {
