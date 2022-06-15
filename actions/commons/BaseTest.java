@@ -17,7 +17,6 @@ import org.testng.Assert;
 import org.testng.Reporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import javaOOP.EnviromentList;
 
 public class BaseTest {
 	private WebDriver driver;
