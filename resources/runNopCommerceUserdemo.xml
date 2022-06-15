@@ -10,7 +10,7 @@
    <test name="Run on FIREFOX">
     <classes>
       <parameter name="browser" value="firefox" />
-      <class name="com.nopcommerce.user.Level_14_Log_Report_TestNG"/>
+      <class name="com.nopcommerce.user.Level_06_Generator_manager_I"/>
     </classes>
   </test>
 </suite> <!-- Suite -->
