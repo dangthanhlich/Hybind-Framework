@@ -28,7 +28,7 @@ public class BaseTest {
 	
 	protected WebDriver getBrowserDriver(String browserName) {
 		
-		BrowserList browserList = BrowserList.valueOf(browserName.toLowerCase());
+		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
 		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
