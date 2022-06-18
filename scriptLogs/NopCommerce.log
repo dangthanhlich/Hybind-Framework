@@ -1,16 +1,215 @@
-[2022-06-16 09:22:24,299] Register - step 01: Navigate to 'register' page
-[2022-06-16 09:22:24,964] Register - step 02 : enter to firstname textbox with value is 'Automation'
-[2022-06-16 09:22:25,073] Register - step 03 : enter to lastName textbox with value is 'FC'
-[2022-06-16 09:22:25,178] Register - step 04 : enter to emailAddress textbox with value is 'afc6143@gmail.vn'
-[2022-06-16 09:22:25,292] Register - step 05 : enter to validPassword textbox with value is '123456'
-[2022-06-16 09:22:25,391] Register - step 06 : enter to confirmPassword textbox with value is '123456'
-[2022-06-16 09:22:25,479] Register - step 07 : click to Register button
-[2022-06-16 09:22:26,390] Register - step 08 : Verify register sucess message is displayed
-[2022-06-16 09:22:26,439] Register - step 09 : click to logout link
-[2022-06-16 09:22:27,221] Login - step 01: Navigate to login page
-[2022-06-16 09:22:27,861] Login - step 02: Enter to Email textbox with values is 'afc6143@gmail.vn'
-[2022-06-16 09:22:27,977] Login - step 03: Enter to password textbox with values is '123456'
-[2022-06-16 09:22:28,087] Login - step 04: Click to login button
-[2022-06-16 09:22:29,011] Login - step 05: Verify 'My Account' link is displayed
-[2022-06-16 09:22:29,097] Login - step 06: Navigate to 'My account' page
-[2022-06-16 09:22:29,765] Login - step 07: Verify 'Customer Infor' page is displayed
+[2022-06-17 13:20:04,406] Register - step 01: Navigate to 'register' page
+[2022-06-17 13:20:05,076] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 13:20:05,216] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 13:20:05,317] Register - step 04 : enter to emailAddress textbox with value is 'afc2807@gmail.vn'
+[2022-06-17 13:20:05,420] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 13:20:05,533] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 13:20:05,624] Register - step 07 : click to Register button
+[2022-06-17 13:20:06,564] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 13:20:06,616] Register - step 09 : click to logout link
+[2022-06-17 13:20:07,348] Login - step 01: Navigate to login page
+[2022-06-17 13:20:07,877] Login - step 02: Enter to Email textbox with values is 'afc2807@gmail.vn'
+[2022-06-17 13:20:07,985] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 13:20:08,085] Login - step 04: Click to login button
+[2022-06-17 13:20:08,929] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 13:20:09,009] Login - step 06: Navigate to 'My account' page
+[2022-06-17 13:20:09,542] Login - step 07: Verify 'Customer Infor' page is displayed
+[2022-06-17 13:26:47,527] Register - step 01: Navigate to 'register' page
+[2022-06-17 13:26:48,197] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 13:26:48,307] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 13:26:48,401] Register - step 04 : enter to emailAddress textbox with value is 'afc8379@gmail.vn'
+[2022-06-17 13:26:48,527] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 13:26:48,618] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 13:26:48,730] Register - step 07 : click to Register button
+[2022-06-17 13:26:49,674] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 13:26:49,749] Register - step 09 : click to logout link
+[2022-06-17 13:26:50,521] Login - step 01: Navigate to login page
+[2022-06-17 13:26:51,145] Login - step 02: Enter to Email textbox with values is 'afc8379@gmail.vn'
+[2022-06-17 13:26:51,230] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 13:26:51,332] Login - step 04: Click to login button
+[2022-06-17 13:26:52,183] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 13:26:52,276] Login - step 06: Navigate to 'My account' page
+[2022-06-17 13:26:52,894] Login - step 07: Verify 'Customer Infor' page is displayed
+[2022-06-17 13:32:04,980] Register - step 01: Navigate to 'register' page
+[2022-06-17 13:32:05,696] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 13:32:05,805] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 13:32:05,889] Register - step 04 : enter to emailAddress textbox with value is 'afc7390@gmail.vn'
+[2022-06-17 13:32:06,018] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 13:32:06,107] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 13:32:06,213] Register - step 07 : click to Register button
+[2022-06-17 13:32:07,239] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 13:32:07,297] Register - step 09 : click to logout link
+[2022-06-17 13:32:08,066] Login - step 01: Navigate to login page
+[2022-06-17 13:32:08,704] Login - step 02: Enter to Email textbox with values is 'afc7390@gmail.vn'
+[2022-06-17 13:32:08,793] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 13:32:08,892] Login - step 04: Click to login button
+[2022-06-17 13:32:09,722] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 13:32:09,801] Login - step 06: Navigate to 'My account' page
+[2022-06-17 13:32:10,463] Login - step 07: Verify 'Customer Infor' page is displayed
+[2022-06-17 13:32:15,544] Register - step 01: Navigate to 'register' page
+[2022-06-17 13:32:16,164] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 13:32:16,262] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 13:32:16,367] Register - step 04 : enter to emailAddress textbox with value is 'afc9991@gmail.vn'
+[2022-06-17 13:32:16,468] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 13:32:16,559] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 13:32:16,671] Register - step 07 : click to Register button
+[2022-06-17 13:32:17,549] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 13:32:17,622] Register - step 09 : click to logout link
+[2022-06-17 13:32:18,367] Login - step 01: Navigate to login page
+[2022-06-17 13:32:19,052] Login - step 02: Enter to Email textbox with values is 'afc9991@gmail.vn'
+[2022-06-17 13:32:19,235] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 13:32:19,387] Login - step 04: Click to login button
+[2022-06-17 13:32:20,247] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 13:32:20,326] Login - step 06: Navigate to 'My account' page
+[2022-06-17 13:32:21,002] Login - step 07: Verify 'Customer Infor' page is displayed
+[2022-06-17 13:33:17,662] Register - step 01: Navigate to 'register' page
+[2022-06-17 13:33:18,319] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 13:33:18,431] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 13:33:18,551] Register - step 04 : enter to emailAddress textbox with value is 'afc7483@gmail.vn'
+[2022-06-17 13:33:18,662] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 13:33:18,778] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 13:33:18,863] Register - step 07 : click to Register button
+[2022-06-17 13:33:19,774] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 13:33:19,830] Register - step 09 : click to logout link
+[2022-06-17 13:33:20,606] Login - step 01: Navigate to login page
+[2022-06-17 13:33:21,191] Login - step 02: Enter to Email textbox with values is 'afc7483@gmail.vn'
+[2022-06-17 13:33:21,279] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 13:33:21,391] Login - step 04: Click to login button
+[2022-06-17 13:33:22,254] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 13:33:22,354] Login - step 06: Navigate to 'My account' page
+[2022-06-17 13:33:22,992] Login - step 07: Verify 'Customer Infor' page is displayed
+[2022-06-17 13:33:28,943] Register - step 01: Navigate to 'register' page
+[2022-06-17 13:33:29,687] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 13:33:29,845] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 13:33:30,022] Register - step 04 : enter to emailAddress textbox with value is 'afc1955@gmail.vn'
+[2022-06-17 13:33:30,204] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 13:33:30,356] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 13:33:30,505] Register - step 07 : click to Register button
+[2022-06-17 13:33:31,474] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 13:33:31,549] Register - step 09 : click to logout link
+[2022-06-17 13:33:32,440] Login - step 01: Navigate to login page
+[2022-06-17 13:33:33,113] Login - step 02: Enter to Email textbox with values is 'afc1955@gmail.vn'
+[2022-06-17 13:33:33,276] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 13:33:33,413] Login - step 04: Click to login button
+[2022-06-17 13:33:34,276] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 13:33:34,345] Login - step 06: Navigate to 'My account' page
+[2022-06-17 13:33:35,004] Login - step 07: Verify 'Customer Infor' page is displayed
+[2022-06-17 15:50:00,327] Register - step 01: Navigate to 'register' page
+[2022-06-17 15:50:01,077] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 15:50:01,311] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 15:50:01,483] Register - step 04 : enter to emailAddress textbox with value is 'afc6006@gmail.vn'
+[2022-06-17 15:50:01,666] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 15:50:01,833] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 15:50:02,014] Register - step 07 : click to Register button
+[2022-06-17 15:50:03,008] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 15:50:03,072] Register - step 09 : click to logout link
+[2022-06-17 15:50:03,931] Login - step 01: Navigate to login page
+[2022-06-17 15:50:04,671] Login - step 02: Enter to Email textbox with values is 'afc6006@gmail.vn'
+[2022-06-17 15:50:04,843] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 15:50:04,985] Login - step 04: Click to login button
+[2022-06-17 15:50:05,859] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 15:50:05,971] Login - step 06: Navigate to 'My account' page
+[2022-06-17 15:50:06,629] Login - step 07: Verify 'Customer Infor' page is displayed
+[2022-06-17 15:50:43,060] Login - step 01: Navigate to login page
+[2022-06-17 15:50:43,664] Login - step 02: Enter to Email textbox with values is 'afc4671@gmail.vn'
+[2022-06-17 15:50:43,853] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 15:50:43,995] Login - step 04: Click to login button
+[2022-06-17 15:50:44,520] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 15:56:12,277] Register - step 01: Navigate to 'register' page
+[2022-06-17 15:56:13,060] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 15:56:13,233] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 15:56:13,399] Register - step 04 : enter to emailAddress textbox with value is 'afc9958@gmail.vn'
+[2022-06-17 15:56:13,582] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 15:56:13,781] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 15:56:13,966] Register - step 07 : click to Register button
+[2022-06-17 15:56:14,897] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 15:56:14,954] Register - step 09 : click to logout link
+[2022-06-17 15:56:15,982] Login - step 01: Navigate to login page
+[2022-06-17 15:56:16,658] Login - step 02: Enter to Email textbox with values is 'afc9958@gmail.vn'
+[2022-06-17 15:56:16,822] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 15:56:16,985] Login - step 04: Click to login button
+[2022-06-17 15:56:17,927] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 20:58:02,814] Register - step 01: Navigate to 'register' page
+[2022-06-17 20:58:03,564] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 20:58:03,738] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 20:58:03,900] Register - step 04 : enter to emailAddress textbox with value is 'afc5115@gmail.vn'
+[2022-06-17 20:58:04,088] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 20:58:04,265] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 20:58:04,419] Register - step 07 : click to Register button
+[2022-06-17 20:58:05,391] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 20:58:05,466] Register - step 09 : click to logout link
+[2022-06-17 20:58:06,514] Login - step 01: Navigate to login page
+[2022-06-17 20:58:07,202] Login - step 02: Enter to Email textbox with values is 'afc5115@gmail.vn'
+[2022-06-17 20:58:07,389] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 20:58:07,521] Login - step 04: Click to login button
+[2022-06-17 20:58:08,430] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 21:14:52,620] Register - step 01: Navigate to 'register' page
+[2022-06-17 21:14:53,353] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 21:14:53,540] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 21:14:53,709] Register - step 04 : enter to emailAddress textbox with value is 'afc3320@gmail.vn'
+[2022-06-17 21:14:53,894] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 21:14:54,088] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 21:14:54,242] Register - step 07 : click to Register button
+[2022-06-17 21:14:55,212] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 21:14:55,295] Register - step 09 : click to logout link
+[2022-06-17 21:14:56,184] Login - step 01: Navigate to login page
+[2022-06-17 21:14:56,812] Login - step 02: Enter to Email textbox with values is 'afc3320@gmail.vn'
+[2022-06-17 21:14:57,018] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 21:14:57,177] Login - step 04: Click to login button
+[2022-06-17 21:14:58,030] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 21:41:00,985] Register - step 01: Navigate to 'register' page
+[2022-06-17 21:41:01,723] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 21:41:01,898] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 21:41:02,091] Register - step 04 : enter to emailAddress textbox with value is 'afc723@gmail.vn'
+[2022-06-17 21:41:02,271] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 21:41:02,442] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 21:41:02,586] Register - step 07 : click to Register button
+[2022-06-17 21:41:03,523] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 21:41:03,595] Register - step 09 : click to logout link
+[2022-06-17 21:41:04,497] Login - step 01: Navigate to login page
+[2022-06-17 21:41:05,149] Login - step 02: Enter to Email textbox with values is 'afc723@gmail.vn'
+[2022-06-17 21:41:05,290] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 21:41:05,448] Login - step 04: Click to login button
+[2022-06-17 21:41:06,331] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 21:42:27,275] Register - step 01: Navigate to 'register' page
+[2022-06-17 21:42:27,938] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 21:42:28,117] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 21:42:28,310] Register - step 04 : enter to emailAddress textbox with value is 'afc1235@gmail.vn'
+[2022-06-17 21:42:28,492] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 21:42:28,676] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 21:42:28,823] Register - step 07 : click to Register button
+[2022-06-17 21:42:29,780] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 21:42:29,847] Register - step 09 : click to logout link
+[2022-06-17 21:42:30,766] Login - step 01: Navigate to login page
+[2022-06-17 21:42:31,389] Login - step 02: Enter to Email textbox with values is 'afc1235@gmail.vn'
+[2022-06-17 21:42:31,555] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 21:42:31,712] Login - step 04: Click to login button
+[2022-06-17 21:42:32,589] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-17 21:44:50,163] Register - step 01: Navigate to 'register' page
+[2022-06-17 21:44:50,863] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-17 21:44:51,021] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-17 21:44:51,166] Register - step 04 : enter to emailAddress textbox with value is 'afc6942@gmail.vn'
+[2022-06-17 21:44:51,321] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-17 21:44:51,531] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-17 21:44:51,699] Register - step 07 : click to Register button
+[2022-06-17 21:44:52,725] Register - step 08 : Verify register sucess message is displayed
+[2022-06-17 21:44:52,807] Register - step 09 : click to logout link
+[2022-06-17 21:44:53,659] Login - step 01: Navigate to login page
+[2022-06-17 21:44:54,312] Login - step 02: Enter to Email textbox with values is 'afc6942@gmail.vn'
+[2022-06-17 21:44:54,507] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-17 21:44:54,650] Login - step 04: Click to login button
+[2022-06-17 21:44:55,550] Login - step 05: Verify 'My Account' link is displayed
+[2022-06-18 08:23:33,271] Register - step 01: Navigate to 'register' page
+[2022-06-18 08:23:34,001] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-06-18 08:23:34,204] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-06-18 08:23:34,409] Register - step 04 : enter to emailAddress textbox with value is 'afc5135@gmail.vn'
+[2022-06-18 08:23:34,589] Register - step 05 : enter to validPassword textbox with value is '123456'
+[2022-06-18 08:23:34,764] Register - step 06 : enter to confirmPassword textbox with value is '123456'
+[2022-06-18 08:23:34,932] Register - step 07 : click to Register button
+[2022-06-18 08:23:36,660] Register - step 08 : Verify register sucess message is displayed
+[2022-06-18 08:23:36,745] Register - step 09 : click to logout link
+[2022-06-18 08:23:37,651] Login - step 01: Navigate to login page
+[2022-06-18 08:23:38,372] Login - step 02: Enter to Email textbox with values is 'afc5135@gmail.vn'
+[2022-06-18 08:23:38,580] Login - step 03: Enter to password textbox with values is '123456'
+[2022-06-18 08:23:38,741] Login - step 04: Click to login button
+[2022-06-18 08:23:39,675] Login - step 05: Verify 'My Account' link is displayed

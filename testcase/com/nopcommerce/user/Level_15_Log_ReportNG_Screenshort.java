@@ -65,13 +65,15 @@ public class Level_15_Log_ReportNG_Screenshort extends BaseTest {
 			log.info("Register - step 08 : Verify register sucess message is displayed");
 			Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
-			log.info("Register - step 09 : click to logout link");
-			homePage = registerPage.clickToLogoutLink();
+			
 
 			}
 
 		@Test
 		public void User_02_Login() {
+			log.info("Register - step 09 : click to logout link");
+			homePage = registerPage.clickToLogoutLink();
+			
 			log.info("Login - step 01: Navigate to login page");
 			loginPage = homePage.openLoginPage();
 
@@ -85,13 +87,13 @@ public class Level_15_Log_ReportNG_Screenshort extends BaseTest {
 			homePage = loginPage.clickToLoginButton();
 			
 			log.info("Login - step 05: Verify 'My Account' link is displayed");
-			Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
+			Assert.assertFalse(homePage.isMyAccountLinkDisplayed());
 
 			log.info("Login - step 06: Navigate to 'My account' page");
 			customerInforPage = homePage.openMyAccountPage();
 			
 			log.info("Login - step 07: Verify 'Customer Infor' page is displayed");
-			Assert.assertTrue(customerInforPage.isCustomerInforPageDisplayed());
+			Assert.assertFalse(customerInforPage.isCustomerInforPageDisplayed());
 		}
 	@AfterClass
 	public void afterClass() {
