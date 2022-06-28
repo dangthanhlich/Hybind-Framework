@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.joda.time.DateTime;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,18 +24,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseTest {
 	private WebDriver driver;
 	protected final Log log;
-	
+
 	protected BaseTest() {
 		log = LogFactory.getLog(getClass());
 	}
-	
+
 	@BeforeSuite
 	public void initBeforeSuite() {
 		deleteAllureReport();
 	}
-	
+
 	protected WebDriver getBrowserDriver(String browserName) {
-		
+
 		BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
 
 		if (browserList == BrowserList.FIREFOX) {
@@ -143,7 +144,7 @@ public class BaseTest {
 	public WebDriver getDriverInstance() {
 		return this.driver;
 	}
-	
+
 //	protected String getEnvironmentUrl(String environmentName) {
 //
 //		String url = null;
@@ -157,7 +158,7 @@ public class BaseTest {
 //		}
 //		return url;
 //	}
-	
+
 	protected String getEnvironmentValue(String serverName) {
 		String envUrl = null;
 		EnviromentList environment = EnviromentList.valueOf(serverName.toUpperCase());
@@ -177,7 +178,7 @@ public class BaseTest {
 		Random rand = new Random();
 		return rand.nextInt(9999);
 	}
-	
+
 	protected boolean verifyTrue(boolean condition) {
 		boolean pass = true;
 		try {
@@ -194,7 +195,6 @@ public class BaseTest {
 		return pass;
 	}
 
-
 	protected boolean verifyFalse(boolean condition) {
 		boolean pass = true;
 		try {
@@ -209,7 +209,6 @@ public class BaseTest {
 		return pass;
 	}
 
-
 	protected boolean verifyEquals(Object actual, Object expected) {
 		boolean pass = true;
 		try {
@@ -223,7 +222,7 @@ public class BaseTest {
 		}
 		return pass;
 	}
-	
+
 	public void deleteAllureReport() {
 		try {
 			String pathFolderDownload = GlobalConstants.PROJECT_PATH + "/allure-json";
@@ -237,6 +236,35 @@ public class BaseTest {
 		} catch (Exception e) {
 			System.out.print(e.getMessage());
 		}
+	}
+
+	protected String getCurrentDate() {
+		DateTime nowUTC = new DateTime();
+		int day = nowUTC.getDayOfMonth();
+		if (day < 10) {
+			String dayValue = "0" + day;
+			return dayValue;
+		}
+		return String.valueOf(day);
+	}
+
+	protected String getCurrentMonth() {
+		DateTime now = new DateTime();
+		int month = now.getMonthOfYear();
+		if (month < 10) {
+			String monthValue = "0" + month;
+			return monthValue;
+		}
+		return String.valueOf(month);
+	}
+
+	protected String getCurrentYear() {
+		DateTime now = new DateTime();
+		return String.valueOf(now.getYear());
+	}
+
+	protected String getCurrentDay() {
+		return getCurrentDate() + "/" + getCurrentMonth() + "/" + getCurrentYear();
 	}
 
 }

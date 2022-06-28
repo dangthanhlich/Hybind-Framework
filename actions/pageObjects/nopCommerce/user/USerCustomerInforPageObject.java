@@ -18,4 +18,6 @@ public class USerCustomerInforPageObject extends BasePage {
 		return isElementDisplayed(driver, CustomerInforPageUI.CUSTOMER_INFOR_HEADER);
 	}
 
+	
+
 }

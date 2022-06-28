@@ -1,10 +1,8 @@
-
 package com.nopcommerce.user;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -46,11 +44,13 @@ public class User_01_Level02_Apply_BasePage_che_doi_tuong {
 		basePage.waitForElementClickable(driver, "//button[@id='register-button']");
 		basePage.clickToElement(driver, "//button[@id='register-button']");
 
-		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='FirstName-error']"), "First name is required.");
+		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='FirstName-error']"),
+				"First name is required.");
 		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='LastName-error']"), "Last name is required.");
 		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='Email-error']"), "Email is required.");
 		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='Password-error']"), "Password is required.");
-		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='ConfirmPassword-error']"), "Password is required.");
+		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='ConfirmPassword-error']"),
+				"Password is required.");
 
 	}
 
@@ -109,7 +109,8 @@ public class User_01_Level02_Apply_BasePage_che_doi_tuong {
 		basePage.waitForElementClickable(driver, "//button[@id='register-button']");
 		basePage.clickToElement(driver, "//button[@id='register-button']");
 
-		Assert.assertEquals(basePage.getElementText(driver, "//div[contains(@class,'message-error')]//li"), "The specified email already exists");
+		Assert.assertEquals(basePage.getElementText(driver, "//div[contains(@class,'message-error')]//li"),
+				"The specified email already exists");
 
 	}
 
@@ -128,7 +129,8 @@ public class User_01_Level02_Apply_BasePage_che_doi_tuong {
 		basePage.waitForElementClickable(driver, "//button[@id='register-button']");
 		basePage.clickToElement(driver, "//button[@id='register-button']");
 
-		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='Password-error']"), "Password must meet the following rules:\nmust have at least 6 characters");
+		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='Password-error']"),
+				"Password must meet the following rules:\nmust have at least 6 characters");
 
 	}
 
@@ -147,7 +149,8 @@ public class User_01_Level02_Apply_BasePage_che_doi_tuong {
 		basePage.waitForElementClickable(driver, "//button[@id='register-button']");
 		basePage.clickToElement(driver, "//button[@id='register-button']");
 
-		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='ConfirmPassword-error']"), "The password and confirmation password do not match.");
+		Assert.assertEquals(basePage.getElementText(driver, "//span[@id='ConfirmPassword-error']"),
+				"The password and confirmation password do not match.");
 
 	}
 

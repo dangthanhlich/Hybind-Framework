@@ -3,11 +3,6 @@
 
 	<listeners>
 		<listener class-name="commons.MethodListener"/>
-		<!-- <listener class-name="reportConfig.ReportNGListener"/>-->
-		 <!--<listener class-name="reportConfig.ExtentTestListener"/>-->
-		 <listener class-name="reportConfig.AllureTestListener"/>
-		<!--<listener class-name="org.uncommons.reportng.HTMLReporter"/>
-		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
 	</listeners>
 	
   <parameter name="environment" value ="DEV" />
@@ -15,15 +10,7 @@
    <test name="Run on CHROME">
     <classes>
       <parameter name="browser" value="chrome" />
-      	<!-- Trigger common Register run first -->
-      <!--<class name="com.nopcomerce.common.Common_01_Register_End_User"/>
-      <class name="com.nopcommerce.user.Level_17_Share_data"/> -->
-      
-       <!-- <class name="com.nopcomerce.common.Common_01_Register_End_User"/>
-      <class name="com.nopcommerce.user.Level_17_Share_data"/> -->
-      
-      <class name="com.nopcomerce.common.Common_01_Register_Cookie"/>
-      <class name="com.nopcommerce.user.Level_17_Share_dataC"/>
+      <class name="com.nopcommerce.user.Level_18_Pattern_Object"/>
       
       <method name=""></method>
     </classes>

@@ -101,6 +101,12 @@ public class USerRegisterPageObject extends BasePage {
 		return getElementText(driver, RegisterPageUI.EXISTING_EMAIL_ERROR_MESSAGE);
 	}
 
+	
+
+
+	
+
+
 //	public void clickToRegisterButton() {
 //		waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
 //		clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
