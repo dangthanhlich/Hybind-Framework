@@ -16,6 +16,7 @@ import pageObjects.wordpress.AdminPostSearchPO;
 import pageObjects.wordpress.PageGeneratorManager;
 import pageObjects.wordpress.UserHomePO;
 import pageObjects.wordpress.UserPostDetailPO;
+import pageObjects.wordpress.UserSearchPostPO;
 
 public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 
@@ -190,6 +191,54 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 
 	@Test
 	public void Post_04_Edit_Post() {
+		log.info("Delete_Post - step 01: Open Admin site");
+		adminDashboadPage = userPostDetailPage.openAdminSite(driver, this.adminUrl);
+
+		log.info("Delete_Post - step 02: Click to 'Posts' menu link");
+		adminPostSearchPage = adminDashboadPage.clickToPostMenuLink();
+
+		log.info("Delete_Post - step 03: Enter to Search textbox");
+		adminPostSearchPage.enterToSearchTextbox(editPostTitle);
+		;
+
+		log.info("Delete_Post - step 04: Click to 'Search Posts' button");
+		adminPostSearchPage.clickToSearchPostButton();
+
+		log.info("Edit_Post - step 05: Select post detail checkbox");
+		adminPostSearchPage.selectPostCheckboxByTitle(editPostTitle);
+
+		log.info("Edit_Post - step 06:Select 'Move to trash' item in dropdown");
+		adminPostSearchPage.selectTextItemInActionDropdown("Move to Trash");
+
+		log.info("Edit_Post - step 07:click to 'apply' button");
+		adminPostSearchPage.clickToapplyButton();
+		adminPostSearchPage.sleepInSecond(5);
+
+		log.info("Edit_Post - step 08:Verify '1 post moved to trash ' message is displayed ");
+		verifyTrue(adminPostSearchPage.isMoveToTrashMessageDisplayed("1 post moved to the Trash."));
+
+		log.info("Edit_Post - step 09:Enter to Search textbox");
+		adminPostSearchPage.enterToSearchTextbox(editPostTitle);
+
+		log.info("Edit_Post - step 10:Click to 'Search Posts' button");
+		adminPostSearchPage.clickToSearchPostButton();
+
+		verifyTrue(adminPostSearchPage.isNoPostFoundMessageDisplayed("No posts found."));
+
+		log.info("Edit_Post - step 12:Open End User site");
+		userHomePage = adminPostSearchPage.openEndUserSite(driver, this.endUserUrl);
+
+		log.info("Edit_Post - step 13:Verify Post title undisplayed at Home Page");
+		verifyTrue(userHomePage.isPostInforUndisplayWithPostTitle(editPostTitle));
+
+		log.info("Edit_Post - step 14:Enter to Search textbox");
+		userHomePage.enterToSearchTextbox(editPostTitle);
+
+		log.info("Edit_Post - step 15:Click to 'Search ' button");
+		userSearchPostPage = userHomePage.clickToSearchButton();
+
+		log.info("Edit_Post - step 16:Verify 'Nothing Found' message is displayed ");
+		verifyTrue(userSearchPostPage.isNothingFoundMessageDisplayed("Nothing Found"));
 
 	}
 
@@ -215,5 +264,6 @@ public class Post_01_Create_Read_Update_Delete_Search extends BaseTest {
 	AdminPostAddNewPO adminPostAddNewPage;
 	UserHomePO userHomePage;
 	UserPostDetailPO userPostDetailPage;
+	UserSearchPostPO userSearchPostPage;
 
 }

@@ -332,9 +332,25 @@ public class BasePage {
 		return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).isDisplayed();
 	}
 
-	public boolean isElementUndisplayed(WebDriver driver, String locator) {
+	public boolean isElementUndisplayed(WebDriver driver, String locatorType) {
 		overrideImplicitTimeout(driver, shortTimeout);
-		List<WebElement> elements = getListWebElement(driver, locator);
+		List<WebElement> elements = getListWebElement(driver, locatorType);
+		overrideImplicitTimeout(driver, longTimeout);
+
+		if (elements.size() == 0) {
+			return true;
+		} else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+			return true;
+		} else {
+			System.out.println("Element in DOM and visible");
+			return false;
+		}
+
+	}
+
+	public boolean isElementUndisplayed(WebDriver driver, String locatorType, String... dynamicValues) {
+		overrideImplicitTimeout(driver, shortTimeout);
+		List<WebElement> elements = getListWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
 		overrideImplicitTimeout(driver, longTimeout);
 
 		if (elements.size() == 0) {

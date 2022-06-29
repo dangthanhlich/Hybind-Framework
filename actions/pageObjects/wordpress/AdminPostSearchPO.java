@@ -42,4 +42,32 @@ public class AdminPostSearchPO extends BasePage {
 		return PageGeneratorManager.getAdminPostAddNewPage(driver);
 	}
 
+	public void selectPostCheckboxByTitle(String editPostTitle) {
+		waitForElementClickable(driver, AdminPostSearchPageUI.ROW_CHECKBOX_BY_TITLE_NAME, editPostTitle);
+		checkToDefaultCheckboxOrRadio(driver, AdminPostSearchPageUI.ROW_CHECKBOX_BY_TITLE_NAME, editPostTitle);
+	}
+
+	public void selectTextItemInActionDropdown(String drodownItem) {
+		waitForElementClickable(driver, AdminPostSearchPageUI.ACTION_DROPDOWN);
+		selectItemDefaultDropdown(driver, AdminPostSearchPageUI.ACTION_DROPDOWN, drodownItem);
+
+	}
+
+	public void clickToapplyButton() {
+		waitForElementClickable(driver, AdminPostSearchPageUI.APPLY_BUTTON);
+		clickToElement(driver, AdminPostSearchPageUI.APPLY_BUTTON);
+
+	}
+
+	public boolean isMoveToTrashMessageDisplayed(String message) {
+		waitForElementVisible(driver, AdminPostSearchPageUI.MOVE_TO_TRASH_MESSAGE, message);
+		return isElementDisplayed(driver, AdminPostSearchPageUI.MOVE_TO_TRASH_MESSAGE, message);
+
+	}
+
+	public boolean isNoPostFoundMessageDisplayed(String message) {
+		waitForElementVisible(driver, AdminPostSearchPageUI.NO_POST_FOUND_MESSAGE, message);
+		return isElementDisplayed(driver, AdminPostSearchPageUI.NO_POST_FOUND_MESSAGE, message);
+	}
+
 }
