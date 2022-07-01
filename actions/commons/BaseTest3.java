@@ -13,7 +13,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.testng.Assert;
@@ -22,11 +21,11 @@ import org.testng.annotations.BeforeSuite;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseTest {
+public class BaseTest3 {
 	private WebDriver driver;
 	protected final Log log;
 
-	protected BaseTest() {
+	protected BaseTest3() {
 		log = LogFactory.getLog(getClass());
 	}
 
@@ -41,22 +40,7 @@ public class BaseTest {
 
 		if (browserList == BrowserList.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
-
-			// mất warning lúc chạy
-			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
-			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,
-					GlobalConstants.PROJECT_PATH + "\\browserLogs\\FirefoxLog.log");
-
-			// Add extension to Firefox
-			FirefoxProfile profile = new FirefoxProfile();
-			File translate = new File(
-					GlobalConstants.PROJECT_PATH + "\\browserExtension\\to_google_translate-4.2.0.xpi");
-			profile.addExtension(translate);
-			profile.setAcceptUntrustedCertificates(true);
-			profile.setAssumeUntrustedCertificateIssuer(false);
-			FirefoxOptions options = new FirefoxOptions();
-			options.setProfile(profile);
-			driver = new FirefoxDriver(options);
+			driver = new FirefoxDriver();
 		} else if (browserList == BrowserList.H_FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
 			// Browser Option : selenium 3.xx trở lên
@@ -66,15 +50,7 @@ public class BaseTest {
 			driver = new FirefoxDriver(options);
 		} else if (browserList == BrowserList.CHROME) {
 			WebDriverManager.chromedriver().setup();
-			// mất warning lúc chạy
-			System.setProperty("webdriver.chrome.args", "--disable-logging");
-			System.setProperty("webdriver.chrome.silentOutput", "true");
-
-			// Add extension to chrome
-			File file = new File(GlobalConstants.PROJECT_PATH + "\\browserExtension\\extension_2_0_12_0.crx");
-			ChromeOptions options = new ChromeOptions();
-			options.addExtensions(file);
-			driver = new ChromeDriver(options);
+			driver = new ChromeDriver();
 		} else if (browserList == BrowserList.H_CHROME) {
 			WebDriverManager.chromedriver().setup();
 			// Browser Option : selenium 3.xx trở lên

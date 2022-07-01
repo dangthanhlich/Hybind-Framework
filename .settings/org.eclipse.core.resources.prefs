@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//actions/commons/BasePage.java=UTF-8
 encoding//actions/commons/BaseTest.java=UTF-8
+encoding//actions/commons/BaseTest3.java=UTF-8
 encoding//actions/commons/BaseTest_Headless.java=UTF-8
 encoding//actions/commons/GlobalConstants.java=UTF-8
 encoding//actions/commons/PageGeneratorManager.java=UTF-8
