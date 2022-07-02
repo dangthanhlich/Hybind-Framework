@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="classes" name="Suite">
+
+		<parameter name="enviroment" value="DEV" />
+
+	  <test name="Run on Firefox">
+	  	<parameter name="browser" value="firefox" />
+	    <classes>
+	        <class name="testNG.ParallelClass01"/>
+	        <class name="testNG.ParallelClass02"/>
+	        <class name="testNG.ParallelClass03"/>
+	    </classes>
+	  </test> <!-- Test -->
+</suite> <!-- Suite -->

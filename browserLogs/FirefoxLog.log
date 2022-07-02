@@ -1,7 +1,6 @@
-1656578106163	geckodriver	INFO	Listening on 127.0.0.1:7657
-1656578107323	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Laptop\\AppData\\Local\\Temp\\rust_mozprofiler85ejN"
-1656578107885	Marionette	INFO	Marionette enabled
-[Parent 23236, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1656722070748	geckodriver	INFO	Listening on 127.0.0.1:4348
+1656722075481	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Laptop\\AppData\\Local\\Temp\\rust_mozprofileIuOnBw"
+1656722077616	Marionette	INFO	Marionette enabled
 WARNING: content window passed to PrivateBrowsingUtils.isWindowPrivate. Use isContentWindowPrivate instead (but only for frame scripts).
 pbu_isWindowPrivate@resource://gre/modules/PrivateBrowsingUtils.jsm:27:11
 isBrowserPrivate@resource://gre/modules/PrivateBrowsingUtils.jsm:47:19
@@ -12,27 +11,14 @@ loadURI@chrome://global/content/elements/browser-custom-element.js:809:12
 loadURI@chrome://mozapps/content/extensions/aboutaddons.js:2483:18
 render/<@chrome://mozapps/content/extensions/aboutaddons.js:2462:14
 render@chrome://mozapps/content/extensions/aboutaddons.js:2421:11
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Laptop\\AppData\\Local\\Temp\\rust_mozprofiler85ejN\\search.json.mozlz4", (void 0)))
-1656578109778	Marionette	INFO	Listening on port 54437
-Read port: 54437
-1656578109873	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcommerce.com"
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcomJmaervaScecrip.com"t erro
-r: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
-console.warn: LoginRecipes: "getRecipes: falling back to a synchroJnaovus message aScript errorf:or:" "htt prses:ource:///gr/e/mdodules/emo.nopcoLoginMamnamgerPearernce.ctom".
-jsm, line 136: TypeError: gRecipeManager is null
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" JavaScript" erhttrorps://de:mo.nopcommerc e.rcomes"ource://gre/modul
-es/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcommerce.com"
-JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcommerce.com"
-JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
-console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcoJmmeravaScce.com"
-ript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gReciconsopele.Manawger isarn null
-: LoJavaginRecipes: "ScrgeitRecipes: fallinpg back tt error: reos ouar scyenchro:n/ous message f/or:" g"httpre/s:/m/demo.onodpcuommlercee.coms"/Login
-ManagerParent.jsm, line 136: TypeError: gRecipeManager is null
-1656578116534	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
-TimedPromise/<@chrome://remote/content/marionette/sync.js:235:19
-TimedPromise@chrome://remote/content/marionette/sync.js:220:10
-interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
-webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Laptop\\AppData\\Local\\Temp\\rust_mozprofileIuOnBw\\search.json.mozlz4", (void 0)))
+1656722083161	Marionette	INFO	Listening on port 52803
+Read port: 52803
+1656722083319	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1656722085347	Marionette	INFO	Stopped listening on port 52803
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+[Parent 29776, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+annot send/recv
+
