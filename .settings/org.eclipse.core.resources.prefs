@@ -6,6 +6,7 @@ encoding//actions/commons/BaseTest_Headless.java=UTF-8
 encoding//actions/commons/GlobalConstants.java=UTF-8
 encoding//actions/commons/PageGeneratorManager.java=UTF-8
 encoding//actions/pageObjects/jQuery/dataTable/HomePageObject.java=UTF-8
+encoding//actions/pageObjects/sauceLab/ProductPageObject.java=UTF-8
 encoding//actions/reportConfig/ReportNGListener.java=UTF-8
 encoding//interfaces/pageUIs/jQuery/dataTable/HomePageUI.java=UTF-8
 encoding//interfaces/pageUIs/nopCommerce/user/HomePageUI.java=UTF-8
