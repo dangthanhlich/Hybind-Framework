@@ -1,7 +1,16 @@
-[2022-07-04 08:59:16,711] Register - step 01: Navigate to 'register' page
-[2022-07-04 08:59:18,731] Register - step 02 : enter to firstname textbox with value is 'null'
-[2022-07-04 08:59:18,872] Login - step 01: Navigate to login page
-[2022-07-04 08:59:19,467] Login - step 02: Enter to Email textbox with values is 'automation@gmail.com1981@gmail.vn'
-[2022-07-04 08:59:19,685] Login - step 03: Enter to password textbox with values is '123456789'
-[2022-07-04 08:59:19,838] Login - step 04: Click to login button
-[2022-07-04 08:59:19,952] Login - step 05: Verify 'My Account' link is displayed
+[2022-07-04 09:16:08,486] Register - step 01: Navigate to 'register' page
+[2022-07-04 09:16:09,116] Register - step 02 : enter to firstname textbox with value is 'Automation'
+[2022-07-04 09:16:09,332] Register - step 03 : enter to lastName textbox with value is 'FC'
+[2022-07-04 09:16:09,490] Register - step 04 : enter to emailAddress textbox with value is 'automation8053@gmail.vn'
+[2022-07-04 09:16:09,681] Register - step 05 : enter to validPassword textbox with value is '123456789'
+[2022-07-04 09:16:09,865] Register - step 06 : enter to confirmPassword textbox with value is '123456789'
+[2022-07-04 09:16:10,031] Register - step 07 : click to Register button
+[2022-07-04 09:16:10,916] Register - step 08 : Verify register sucess message is displayed
+[2022-07-04 09:16:10,981] Register - step 09 : click to logout link
+[2022-07-04 09:16:11,883] Login - step 01: Navigate to login page
+[2022-07-04 09:16:12,432] Login - step 02: Enter to Email textbox with values is 'automation8053@gmail.vn'
+[2022-07-04 09:16:12,594] Login - step 03: Enter to password textbox with values is '123456789'
+[2022-07-04 09:16:12,772] Login - step 04: Click to login button
+[2022-07-04 09:16:13,678] Login - step 05: Verify 'My Account' link is displayed
+[2022-07-04 09:16:13,763] Login - step 06: Navigate to 'My account' page
+[2022-07-04 09:16:15,694] Login - step 07: Verify 'Customer Infor' page is displayed
