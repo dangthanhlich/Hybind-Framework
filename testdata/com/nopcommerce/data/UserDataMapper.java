@@ -35,10 +35,12 @@ public class UserDataMapper {
 	}
 
 	public String getFirstName() {
+		System.out.println("firstname -----------------" + firstName);
 		return firstName;
 	}
 
 	public String getLastName() {
+		System.out.println("lastName -----------------" + lastName);
 		return lastName;
 	}
 
